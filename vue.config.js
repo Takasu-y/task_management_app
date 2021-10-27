@@ -5,7 +5,7 @@ module.exports = {
   // publicPath: process.env.NODE_ENV === 'production'
   //   ?'/task-management-app/'
   //   :'/'
-  outputDir: 'docs',
-  assetsDir: './',
-  publicPath: './'
+  publicPath: './',
+  outputDir: 'docs/',
+  // assetsDir: './',
 }
