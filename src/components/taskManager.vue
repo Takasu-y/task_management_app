@@ -1,19 +1,25 @@
 <template>
-    <v-row>
+<div class="d-flex">
+    <v-list
+    class="d-flex align-start overflow-x-auto"
+    >
         <task-section
-            v-for="section in sections"
-            :key="section.id"
-            :section="section"
-            class="task-section"
+            v-for="i in counter"
+            :key="i"
         ></task-section>
-    </v-row>
+    </v-list>
+    <v-btn
+        @click="counter +=1"
+        class="pa-2 mt-6"
+    >
+        <v-icon>mdi-plus-circle</v-icon>セクションを追加
+    </v-btn>
+</div>
 </template>
 
 <script>
 
 import taskSection from './taskSection.vue'
-
-let sectionId = 1;
 
 export default {
     name: "taskManager",
@@ -21,20 +27,7 @@ export default {
         taskSection,
     },
     data: ()=> ({
-        sections: [
-            {
-                id: sectionId++,
-                title: "Monday",
-            },
-            {
-                id: sectionId++,
-                title: "Tuesday",
-            },
-            // {
-            //     id: sectionId++,
-            //     title: "Wednesday",
-            // },
-        ],
+        counter: 1,
     }),
 };
 </script>

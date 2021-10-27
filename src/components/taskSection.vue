@@ -1,7 +1,8 @@
 <template>
     <v-card
         width="320"
-        class="mr-6 pa-3 mb-16"
+        min-width="320"
+        class="mx-3 pa-3"
         elevation="10"
     >
         <v-card-text class="d-flex justify-center">
@@ -24,7 +25,7 @@
         <v-list
             class="overflow-y-auto mb-4"
             width="100%"
-            max-height="75vh">
+            max-height="60vh">
 
             <draggable
             v-model="tasks"
@@ -74,30 +75,30 @@ export default {
                 editable: true,
             },
             tasks: [
-                {
-                    id: todoId++,
-                    title: "朝ごはんを食べる",
-                    body: "プロテインも飲む",
-                    editable: false,
-                    favorite: false,
-                    check: false,
-                },
-                {
-                    id: todoId++,
-                    title: "昼ごはんを食べる",
-                    body: "中華かラーメンを食べる",
-                    editable: false,
-                    favorite: false,
-                    check: false,
-                },
-                {
-                    id: todoId++,
-                    title: "夜ごはんを食べる",
-                    body: "サラダのみにする",
-                    editable: false,
-                    favorite: false,
-                    check: false,
-                },
+                // {
+                //     id: todoId++,
+                //     title: "朝ごはんを食べる",
+                //     body: "プロテインも飲む",
+                //     editable: false,
+                //     favorite: false,
+                //     check: false,
+                // },
+                // {
+                //     id: todoId++,
+                //     title: "昼ごはんを食べる",
+                //     body: "中華かラーメンを食べる",
+                //     editable: false,
+                //     favorite: false,
+                //     check: false,
+                // },
+                // {
+                //     id: todoId++,
+                //     title: "夜ごはんを食べる",
+                //     body: "サラダのみにする",
+                //     editable: false,
+                //     favorite: false,
+                //     check: false,
+                // },
             ]
         }
     },
